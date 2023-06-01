@@ -1,10 +1,37 @@
-import "./styles.css";
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+const otsikko = document.querySelector("h1");
+
+
+const nappula = document.querySelector("#my-button");
+
+    nappula.addEventListener("click", funktio);
+        function funktio() {
+            console.log("hello world")
+
+            otsikko.innerHTML = "My notebook";
+
+        }
+
+        
+const lista = document.querySelector("ul");
+
+const nappula2 = document.querySelector("#add-data")
+
+const tekstiKentta = document.querySelector("textarea");    
+
+
+    nappula2.addEventListener("click", funktio2);
+    function funktio2() {
+
+        tekstiKentta.addEventListener("click", funktio2);
+
+        let text = tekstiKentta.value;
+
+
+        let li = document.createElement("li");
+        li.appendChild(document.createTextNode(text));
+        lista.appendChild(li);
+    };
+
+
+ 
